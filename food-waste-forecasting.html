@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A machine-learning forecasting system to help reduce university dining-hall food waste.">
+  <title>Food Waste Reduction Forecasting Model | Margaret Wozniak</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/main.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav-shell">
+      <a class="brand" href="../index.html"><span class="brand-mark">MW</span><span class="brand-name">Margaret Wozniak</span></a>
+      <a class="button button-secondary" href="../index.html#projects">← All projects</a>
+    </div>
+  </header>
+  <main class="section section-shell project-detail">
+    <p class="eyebrow">Project</p>
+    <h1>Food Waste Reduction Forecasting Model<span class="period">.</span></h1>
+    
+    <section class="project-copy">
+      <h2>Project Overview</h2>
+      <p>As part of BLUElab Data, I worked on developing a machine learning forecasting system to help reduce food waste in university dining halls. The goal was to predict meal demand so dining services could better align the amount of food prepared with expected consumption.</p>
+      <p>The project combined historical dining data with information about menu items, dates, meal periods, dietary characteristics, weather, and special events. We developed a data-processing pipeline to create a unified modeling dataset and investigated multiple approaches for representing recipe information and temporal patterns.</p>
+      <p>A major focus of the project was improving how the model represented complex recipe information. We transitioned from TF-IDF-based recipe representations to sentence-transformer embeddings and investigated nonlinear model architectures to better capture relationships between menu items and demand. We also explored cyclical date encoding and higher harmonics to represent seasonal and short-term demand patterns.</p>
+      <h2>Key Technical Aspects</h2>
+      <ul class="original-project-list"><li><b>Machine Learning Forecasting:</b> Developed a model intended to predict dining demand and support food-waste reduction.</li><li><b>Natural Language Embeddings:</b> Transitioned recipe representations from TF-IDF to sentence transformers to better capture semantic relationships between menu items.</li><li><b>Feature Engineering:</b> Incorporated features including vegan/vegetarian/allergen information, weather, and special events alongside meal and temporal information.</li><li><b>Temporal Feature Engineering:</b> Investigated cyclical representations of day-of-year and day-of-week using sine/cosine transformations rather than treating dates as simple linear values.</li><li><b>Higher-Order Harmonics:</b> Explored higher harmonics to represent sharper seasonal peaks, valleys, and unusual demand events.</li><li><b>Nonlinear Modeling:</b> Investigated architectures including random forests, sequential linear models, kNN, and classification approaches after identifying limitations with simpler linear models.</li><li><b>Data Cleaning & Standardization:</b> Combined cleaned historical dining data with newly obtained weight data and associated menu items with their weights in pounds.</li><li><b>Data Challenges:</b> Worked through inconsistencies in portion-size measurements and the difficulty of defining a standardized prediction target across different serving units.</li><li><b>Model Deployment:</b> Developed a locally running prototype capable of producing predictions in approximately one second, with food-name search and station lookup functionality.</li></ul>
+
+      <h2>Graphical Model Outputs</h2>
+      <div class="project-figure-grid">
+        <figure class="project-figure">
+          <img
+            src="https://margaret-w.weebly.com/uploads/1/5/2/6/152606335/editor/bluelab-data-2026-expo-presentation-2.png?1789507128="
+            alt="UMAP projections of recipe embeddings"
+            loading="lazy"
+          >
+          <figcaption>
+            Visual representation of the vector embedding space created by the model
+          </figcaption>
+        </figure>
+        <figure class="project-figure">
+          <img
+            src="https://margaret-w.weebly.com/uploads/1/5/2/6/152606335/bluelab-data-2026-expo-presentation-1_orig.png"
+            alt="Meal versus waste for dining hall meals"
+            loading="lazy"
+          >
+          <figcaption>
+            Visual representation of historic overproduction trends in the dining halls
+          </figcaption>
+        </figure>
+      </div>
+      <h2>Project Impact</h2>
+      <p>As a direct result of this project, food waste in the dining halls was reduced by 10% over the course of the Winter 2026 semester.</p>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="footer-inner section-shell"><a class="brand footer-brand" href="../index.html"><span class="brand-mark">MW</span><span class="brand-name">Margaret Wozniak</span></a><p>© 2026 Margaret Wozniak</p><a class="back-to-top" href="../index.html#projects">Back to all projects ↑</a></div></footer>
+</body>
+</html>
